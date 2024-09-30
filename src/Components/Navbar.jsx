@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export const Navbar = () => {
   return (
     <div>
-      <div className="flex flex-row justify-between bg-violet-300">
+      <div className="flex flex-row justify-between items-center bg-violet-300 h-[50px]">
         <div>
           <NavLink to="/">
             <div>
@@ -11,8 +11,7 @@ export const Navbar = () => {
             </div>
           </NavLink>
         </div>
-
-        <div>
+        <div className="flex gap-4 items-center mr-4">
           <NavLink to="/">
             <p>Home</p>
           </NavLink>
