@@ -1,3 +1,4 @@
+import { FaTrash } from "react-icons/fa6";
 import { Product } from "./Product";
 import { useState } from "react";
 
@@ -45,21 +46,22 @@ const CartButton = () => {
     <div>
       {/* If item is not in cart, show Add to Cart button */}
       {!cartItem ? (
-        <button onClick={addToCart}>Add to Cart</button>
+        <button className="bg-red-500 text-white font-semibold px-4 py-2 rounded-md" onClick={addToCart}>Add to Cart</button>
       ) : (
-        <div>
+        <div className="flex gap-4 items-center">
           <div>
             {/* Counter with Increment and Decrement Buttons */}
             <button
               onClick={decrementQuantity}
               disabled={cartItem.quantity <= 1}
+              className="border-2 px-2 py-1"
             >
               -
             </button>
             <span> {cartItem.quantity} </span>
-            <button onClick={incrementQuantity}>+</button>
+            <button className="border-2 px-2 py-1" onClick={incrementQuantity}>+</button>
           </div>
-          <button onClick={removeFromCart}>Remove from Cart</button>
+          <button className="bg-red-500 text-white font-semibold px-4 py-2 rounded-md" onClick={removeFromCart}><FaTrash /></button>
         </div>
       )}
     </div>

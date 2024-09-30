@@ -2,8 +2,7 @@ import Navbar from "../src/Components/Navbar"
 import {Routes} from "react-router-dom"
 import { Route } from "react-router-dom"
 import { Home } from "./Pages/Home"
-import  { Cart } from "./Pages/cart"
-
+import Cart from "./Pages/Cart"
 
 const App = () => {
   return (
@@ -13,7 +12,7 @@ const App = () => {
       </div>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/" element={<Cart/>}/>
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
     </div>
   )
