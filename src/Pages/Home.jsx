@@ -28,20 +28,19 @@ export const Home = () => {
 
   return (
     <div>
-      {
-        Loading ? <Spinner/> :
-        posts.length > 0 ?
-        (<div>
-          {
-             posts.map( (post) => {
-              <Product key = {posts.id} post = {posts}/>
-            } )
-          }
-        </div>) :
+      {Loading ? (
+        <Spinner />
+      ) : posts.length > 0 ? (
+        <div>
+          {posts.map((post) => {
+            <Product key={posts.id} post={posts} />;
+          })}
+        </div>
+      ) : (
         <div>
           <p>No Data Found</p>
         </div>
-      }
+      )}
     </div>
-  )
+  );
 };

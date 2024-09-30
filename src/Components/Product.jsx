@@ -9,10 +9,10 @@ export const Product = (posts) => {
         <p>{posts.description}</p>
       </div>
       <div>
-        <img src= {posts.image} alt="image" />
+        <img src= {posts.image}/>
       </div>
       <div>
-        <p>{posts.price}</p>
+        <p>${posts.price}</p>
       </div>
       <div>
         <button>
